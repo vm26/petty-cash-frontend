@@ -14,7 +14,10 @@ const CashSales=()=>{
             comment:cash.comment
         }).then(res=>console.log(res)).catch(err=>console.log(err));
         if(saved)
+        { 
         alert('Cash sale Added successfully');
+          navigate('/home');
+        }
     }
     const handleChange=(e)=>{
         var name=e.target.id;
