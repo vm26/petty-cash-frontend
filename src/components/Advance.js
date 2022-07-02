@@ -15,7 +15,9 @@ const Advance=()=>{
             comment:advance.comment
         }).then(res=>console.log(res)).catch(err=>console.log(err));
         if(saved)
+        { navigate('/home');
         alert('Advance Added successfully');
+        }
        
     }
     const handleChange=(e)=>{
