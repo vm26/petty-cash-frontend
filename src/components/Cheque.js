@@ -12,7 +12,9 @@ const Cheque=()=>{
             comment:cheque.comment
         }).then(res=>console.log(res)).catch(err=>console.log(err));
         if(saved)
+        {
         alert('Cheque Added successfully!! Delete respective bill/advances/advance salaries which u provided cheque');
+           navigate('/home');}
     }
     const handleChange=(e)=>{
         var name=e.target.id;
