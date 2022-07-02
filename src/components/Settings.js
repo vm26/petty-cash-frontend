@@ -21,6 +21,7 @@ const Settings = () => {
         .catch(err=>console.log(err));
         if(saved){
             alert('Details Saved successfully');
+           navigate('/home');
         }
     }
     const handleChange=(e)=>{
