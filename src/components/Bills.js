@@ -14,7 +14,9 @@ const Bills=()=>{
             amount:bill.amount
         }).then(res=>console.log(res)).catch(err=>console.log(err));
         if(saved)
-        alert('Bill Added successfully');
+        {  alert('Bill Added successfully');
+         navigate('/home');
+        }
     }
     const handleChange=(e)=>{
         var name=e.target.id;
