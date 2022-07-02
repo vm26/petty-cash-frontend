@@ -13,7 +13,10 @@ const FundIn=()=>{
             comment:fund.comment
         }).then(res=>console.log(res)).catch(err=>console.log(err));
         if(saved)
+        {
         alert('Fund Added successfully');
+           navigate('/home');
+        }
     }
     const handleChange=(e)=>{
         var name=e.target.id;
