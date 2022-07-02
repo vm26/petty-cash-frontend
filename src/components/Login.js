@@ -14,7 +14,7 @@ const Login=()=>{
     const navigate=useNavigate();
     const handleSubmit=async()=>{
         setspinner(true);
-        let res=await axios.post('http://localhost:5000/login',{email,password});        
+        let res=await axios.post('https://petty-service.herokuapp.com/login',{email,password});        
        
         if(res.data.statusCode==200){
             setspinner(false);            

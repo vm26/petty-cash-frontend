@@ -5,7 +5,7 @@ const Bills=()=>{
   const navigate=useNavigate();
     const [bill,setbill]=useState({})    
     const handleSubmit=()=>{     
-        let saved= axios.post('http://localhost:5000/addbills',{
+        let saved= axios.post('https://petty-service.herokuapp.com/addbills',{
             date:bill.date,
             billno:bill.billno,
             billname:bill.billname,

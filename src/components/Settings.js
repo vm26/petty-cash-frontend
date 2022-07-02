@@ -5,11 +5,11 @@ const Settings = () => {
   const navigate=useNavigate();
     const [details,setdetails]=useState({});
     useEffect(()=>{
-         axios.get('http://localhost:5000/getcompanydetails').then(res=>{setdetails(res.data.datas[0]);console.log(res.data.datas[0])})
+         axios.get('https://petty-service.herokuapp.com/getcompanydetails').then(res=>{setdetails(res.data.datas[0]);console.log(res.data.datas[0])})
             .catch(err=>console.log(err));
     },[])
-    const handleSave=async()=>{
-        const saved=await axios.post('http://localhost:5000/addcompanydetails',{
+    const handleSave=()=>{
+        const saved=axios.post('https://petty-service.herokuapp.com/addcompanydetails',{
         company:details.company,
         contact:details.contact,
         currency:details.currency,

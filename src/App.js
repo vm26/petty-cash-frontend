@@ -34,49 +34,49 @@ function App() {
   const [counter, setcounter] = useState(0);  
   useEffect(() => {
     axios
-      .get("http://localhost:5000/getcompanydetails")
+      .get("https://petty-service.herokuapp.com/getcompanydetails")
       .then((res) => {
         setdetails(res.data.datas[0]);
       })
       .catch((err) => console.log(err));
     axios
-      .get("http://localhost:5000/getbills")
+      .get("https://petty-service.herokuapp.com/getbills")
       .then((res) => {
         setbills(res.data.datas);
       })
       .catch((err) => console.log(err));
     axios
-      .get("http://localhost:5000/getadvances")
+      .get("https://petty-service.herokuapp.com/getadvances")
       .then((res) => {
         setadvances(res.data.datas);
       })
       .catch((err) => console.log(err));
     axios
-      .get("http://localhost:5000/getadvancesalaries")
+      .get("https://petty-service.herokuapp.com/getadvancesalaries")
       .then((res) => {
         setadvancesalary(res.data.datas);
       })
       .catch((err) => console.log(err));
     axios
-      .get("http://localhost:5000/getcashsales")
+      .get("https://petty-service.herokuapp.com/getcashsales")
       .then((res) => {
         setcash(res.data.datas);
       })
       .catch((err) => console.log(err));
     axios
-      .get("http://localhost:5000/getfunds")
+      .get("https://petty-service.herokuapp.com/getfunds")
       .then((res) => {
         setfund(res.data.datas);
       })
       .catch((err) => console.log(err));
     axios
-      .get("http://localhost:5000/getcheques")
+      .get("https://petty-service.herokuapp.com/getcheques")
       .then((res) => {
         setcheque(res.data.datas);
       })
       .catch((err) => console.log(err));
     axios
-      .get("http://localhost:5000/gethistory")
+      .get("https://petty-service.herokuapp.com/gethistory")
       .then((res) => {
         sethistory(res.data.datas);
       })
@@ -85,7 +85,7 @@ function App() {
  
   //Delete functions
   const handleBillDelete = (id) => {
-    axios.delete(`http://localhost:5000/deletebill/${id}`)
+    axios.delete(`https://petty-service.herokuapp.com/deletebill/${id}`)
       .then((res) => {
         setcounter(counter + 1);
         alert("Bill deleted successfully");
@@ -93,7 +93,7 @@ function App() {
       .catch((err) => console.log(err));
   };
   const handleAdvanceDelete = (id) => {
-     axios.delete(`http://localhost:5000/deleteadvance/${id}`)
+     axios.delete(`https://petty-service.herokuapp.com/deleteadvance/${id}`)
       .then((res) => {
         setcounter(counter + 1);
         alert("Advance deleted successfully");
@@ -101,7 +101,7 @@ function App() {
       .catch((err) => console.log(err));    
   };
   const handleAdvanceSalaryDelete = (id) => {
-    axios.delete(`http://localhost:5000/deleteadvancesalary/${id}`)
+    axios.delete(`https://petty-service.herokuapp.com/deleteadvancesalary/${id}`)
       .then((res) => {
         setcounter(counter + 1);
         alert("Advance Salary deleted successfully");
@@ -109,7 +109,7 @@ function App() {
       .catch((err) => console.log(err));
   };
   const handleCashSaleDelete = (id) => {
-   axios.delete(`http://localhost:5000/deletecashsale/${id}`)
+   axios.delete(`https://petty-service.herokuapp.com/deletecashsale/${id}`)
       .then((res) => {
         setcounter(counter + 1);
         alert("Cash Sale deleted successfully");
@@ -117,7 +117,7 @@ function App() {
       .catch((err) => console.log(err));
   };
   const handleFundDelete = (id) => {
-   axios.delete(`http://localhost:5000/deletefund/${id}`)
+   axios.delete(`https://petty-service.herokuapp.com/deletefund/${id}`)
       .then((res) => {
         setcounter(counter + 1);
         alert("Fund deleted successfully");
@@ -125,7 +125,7 @@ function App() {
       .catch((err) => console.log(err));   
   };
   const handleChequeDelete = (id) => {
-    axios.delete(`http://localhost:5000/deletecheque/${id}`)
+    axios.delete(`https://petty-service.herokuapp.com/deletecheque/${id}`)
       .then((res) => {
         setcounter(counter + 1);
         alert("Cheque deleted successfully");

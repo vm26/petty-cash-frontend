@@ -7,7 +7,7 @@ const CashSales=()=>{
   const navigate=useNavigate();
     const [cash,setcash]=useState({})
     const handleSubmit=()=>{
-        let saved= axios.post('http://localhost:5000/addcashsales',{
+        let saved= axios.post('https://petty-service.herokuapp.com/addcashsales',{
             date:cash.date,            
             recno:cash.recno,                        
             amount:cash.amount,

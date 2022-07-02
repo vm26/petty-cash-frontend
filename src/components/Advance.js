@@ -7,7 +7,7 @@ const Advance=()=>{
   
     const [advance,setadvance]=useState({})
     const handleSubmit=()=>{
-        let saved= axios.post('http://localhost:5000/addadvances',{
+        let saved= axios.post('https://petty-service.herokuapp.com/addadvances',{
             date:advance.date,            
             empname:advance.empname,
             empcode:advance.empcode,            

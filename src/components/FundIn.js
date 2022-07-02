@@ -5,7 +5,7 @@ const FundIn=()=>{
   const navigate=useNavigate();
     const [fund,setFund]=useState({})
     const handleSubmit=()=>{        
-        let saved= axios.post('http://localhost:5000/addfund',{
+        let saved= axios.post('https://petty-service.herokuapp.com/addfund',{
             date:fund.date,  
             source:fund.source,          
             empname:fund.empname,                       

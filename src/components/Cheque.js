@@ -5,7 +5,7 @@ const Cheque=()=>{
   const navigate=useNavigate();
     const [cheque,setcheque]=useState({})
     const handleSubmit=()=>{        
-        let saved= axios.post('http://localhost:5000/addcheque',{
+        let saved= axios.post('https://petty-service.herokuapp.com/addcheque',{
             date:cheque.date,
             chequeno:cheque.chequeno, 
             amount:cheque.amount,

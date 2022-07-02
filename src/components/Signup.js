@@ -17,7 +17,7 @@ const Signup=()=>{
     const navigate=useNavigate();
     const handleSubmit=async()=>{
         setspinner(true);
-        let res= await axios.post(`http://localhost:5000/register`,{email,password,cpassword});
+        let res= await axios.post(`https://petty-service.herokuapp.com/register`,{email,password,cpassword});
         if((res.data.statusCode==200)||(res.data.statusCode==300)){            
             setspinner(false);
             setmessage(res.data.message);
