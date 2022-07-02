@@ -13,7 +13,10 @@ const Staffadvance=()=>{
             comment:advance.comment
         }).then(res=>console.log(res)).catch(err=>console.log(err));
         if(saved)
+        {
         alert('Advance Salary Added successfully');
+           navigate('/home');
+        }
       }
     const handleChange=(e)=>{
         var name=e.target.id;
